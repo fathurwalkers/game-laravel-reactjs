@@ -3,7 +3,7 @@ import { Head, Link } from '@inertiajs/react';
 const Homepage = () => {
     return (
         <>
-            <div className="flex justify-center items-center min-h-screen bg-black text-dark text-1sm">
+            <div className="flex justify-center items-center min-h-screen bg-blue text-dark text-1sm">
                 <p>
                     Uploading data..<br />
                     More info click link below <br />

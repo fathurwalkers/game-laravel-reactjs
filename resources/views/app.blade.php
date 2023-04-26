@@ -14,8 +14,22 @@
         @viteReactRefresh
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         @inertiaHead
+
+        {{-- <style>
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            .container-snap::-webkit-scrollbar {
+                display: none!important;
+            }
+
+            /* Hide scrollbar for IE, Edge and Firefox */
+            .container-snap {
+                -ms-overflow-style: none!important; /* IE and Edge */
+                scrollbar-width: none!important; /* Firefox */
+            }
+        </style> --}}
+
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased h-screen">
         @inertia
     </body>
 </html>

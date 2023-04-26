@@ -45,7 +45,6 @@ const Homepage = () => {
                             <br />
                             <br />
                             <br />
-                            <br />
 
                             <div className="columns">
 
@@ -56,7 +55,6 @@ const Homepage = () => {
 
                             </div>
 
-                            <br />
                             <br />
                             <br />
                             <br />
@@ -73,7 +71,6 @@ const Homepage = () => {
                                 </div>
                             </div>
 
-                            <br />
                             <br />
                             <div className="columns">
                                 <div className="w-12 mx-auto justify-center items-center content-center">

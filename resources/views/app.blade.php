@@ -30,6 +30,11 @@
 
     </head>
     <body class="font-sans antialiased h-screen">
+
+        {{-- <audio id="musicplayer" autoPlay>
+            <source src="assets/menu-sound1.mp3" />
+        </audio> --}}
+
         @inertia
     </body>
 </html>

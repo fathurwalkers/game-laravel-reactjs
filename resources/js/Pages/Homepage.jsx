@@ -1,5 +1,11 @@
 import { Head, Link } from '@inertiajs/react';
 
+const tombolKeluar = () => {
+    console.log('terklik!');
+    window.open("", "_blank", "");
+    window.close();
+}
+
 const Homepage = () => {
     return (
         <>
@@ -9,6 +15,8 @@ const Homepage = () => {
                     <div className="card-body">
 
                         <div className="container justify-center items-center">
+
+                            <br />
 
                             <div className="columns">
                                 <p>
@@ -21,20 +29,39 @@ const Homepage = () => {
                             <br />
                             <br />
                             <br />
+                            <br />
 
                             <div className="columns">
 
                                 <div className="flex w-20 mx-auto justify-center items-center content-center">
-                                    <img src="/assets/menu-huruf.png" alt="" className="mx-9" />
-                                    <img src="/assets/menu-angka.png" alt="" className="mx-9" />
+                                    <img src="/assets/menu-huruf.png" alt="" className="mx-9 hover:scale-125 hover:opacity-200" />
+                                    <img src="/assets/menu-angka.png" alt="" className="mx-9 hover:scale-125 hover:opacity-200" />
                                 </div>
 
+                            </div>
+
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+
+                            <div className="columns">
+                                <div className="w-36 mx-auto justify-center items-center content-center">
+                                    <img src="/assets/tombol-petunjuk.png" alt="" className="hover:scale-125 hover:opacity-200" />
+                                </div>
+                            </div>
+                            <br />
+                            <div className="columns">
+                                <div className="w-36 mx-auto justify-center items-center content-center">
+                                    <img src="/assets/tombol-keluar.png" alt="" className="hover:scale-125 hover:opacity-200" onClick={tombolKeluar} />
+                                </div>
                             </div>
 
                         </div>
 
                     </div>
                 </div>
+
 
             </div>
         </>

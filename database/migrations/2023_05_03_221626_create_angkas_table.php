@@ -8,15 +8,15 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('huruf', function (Blueprint $table) {
+        Schema::create('angka', function (Blueprint $table) {
             $table->id();
-            $table->string('content_huruf')->nullable();
+            $table->string('content_angka')->nullable();
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('huruf');
+        Schema::dropIfExists('angka');
     }
 };

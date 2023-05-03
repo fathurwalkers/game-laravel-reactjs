@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Angka extends Model
 {
     use HasFactory;
+    protected $table = "angka";
+    protected $guarded = [];
+    protected $primaryKey = "id";
 }

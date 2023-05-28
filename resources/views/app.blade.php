@@ -27,7 +27,7 @@
                 scrollbar-width: none!important; /* Firefox */
             }
         </style> --}}
-
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     </head>
     <body class="font-sans antialiased h-screen">
 

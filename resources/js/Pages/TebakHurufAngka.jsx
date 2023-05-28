@@ -47,10 +47,56 @@ const tombolPlayerAngka = (params) => {
     }
 }
 
+const cekTebakan = (props1, props2) => {
+    console.log(props1);
+    console.log(props2);
+    if (props1 == props2) {
+        console.log(true)
+        location.href = "#my-modal-1";
+    } else {
+        console.log(false)
+        location.href = "#my-modal-2";
+    }
+    // location.href = "#my-modal-2";
+    // setTimeout('', 10000);
+    // location.href = route('tebak-huruf-angka');
+}
+
 const Homepage = (props) => {
     console.log(props.nilaitebak)
     return (
         <>
+
+            <div className="modal" id="my-modal-1">
+                <div className="modal-box justify-center items-center content-center">
+                    <h3 className="font-bold text-lg justify-center items-center content-center text-center"><b>Jawaban <div className="text-[#50d71e]">Benar</div></b> </h3>
+                    <br />
+                    <div className="columns">
+                        <div className="w-36 mx-auto justify-center items-center content-center">
+                            <img src="/assets/benar.jpg" alt="" className="hover:scale-125 hover:opacity-200" />
+                        </div>
+                    </div>
+                    <div className="modal-action">
+                        <a href={route('tebak-huruf-angka')} className="btn">Yay!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div className="modal" id="my-modal-2">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg justify-center items-center content-center text-center"><b>Jawaban <div className="text-[#50d71e]">Salah</div></b> </h3>
+                    <br />
+                    <div className="columns">
+                        <div className="w-36 mx-auto justify-center items-center content-center">
+                            <img src="/assets/salah.jpg" alt="" className="hover:scale-125 hover:opacity-200" />
+                        </div>
+                    </div>
+                    <div className="modal-action">
+                        <a href="#" className="btn">Yay!</a>
+                    </div>
+                </div>
+            </div>
+
             <div className="flex justify-center w-full h-screen bg-cover bg-no-repeat overscroll-none bg-[url('/assets/play3.jpg')] text-white text-1sm overscroll-auto">
 
                 <div className="card">
@@ -69,7 +115,7 @@ const Homepage = (props) => {
                             <br />
                             <div className="columns">
                                 <div className="w-20 blur-sm brightness-50 mx-auto justify-center items-center content-center">
-                                    <img src={"/assets/"+ props.nilaitebak +".png"} alt="" className="opacity-50 hover:scale-125 hover:opacity-200" />
+                                    <img src={"/assets/" + props.nilaitebak + ".png"} alt="" className="opacity-50 hover:scale-125 hover:opacity-200" />
                                 </div>
                             </div>
 
@@ -84,7 +130,7 @@ const Homepage = (props) => {
                                             <div key={i}>
                                                 <img src={"/assets/" + data + ".png"} alt=""
                                                     className="hover:scale-125 hover:opacity-150 w-14 h-14 flex center justify-center items-center"
-                                                    onClick={() => clickAngka(data)} />
+                                                    onClick={() => cekTebakan(data, props.nilaitebak)} htmlFor="my-modal-3" />
                                             </div>
                                         </div>
                                     )

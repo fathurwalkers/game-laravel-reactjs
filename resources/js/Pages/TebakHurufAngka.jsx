@@ -68,7 +68,7 @@ const Homepage = (props) => {
         <>
 
             <div className="modal" id="my-modal-1">
-                <div className="modal-box justify-center items-center content-center">
+                <div className="modal-box bg-primary-content justify-center items-center content-center">
                     <h3 className="font-bold text-lg justify-center items-center content-center text-center"><b>Jawaban <div className="text-[#50d71e]">Benar</div></b> </h3>
                     <br />
                     <div className="columns">
@@ -83,7 +83,7 @@ const Homepage = (props) => {
             </div>
 
             <div className="modal" id="my-modal-2">
-                <div className="modal-box">
+                <div className="modal-box bg-primary-content">
                     <h3 className="font-bold text-lg justify-center items-center content-center text-center"><b>Jawaban <div className="text-[#50d71e]">Salah</div></b> </h3>
                     <br />
                     <div className="columns">

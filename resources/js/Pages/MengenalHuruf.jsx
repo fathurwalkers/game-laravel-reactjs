@@ -26,29 +26,29 @@ const tombolPlayer = () => {
     }
 }
 const clickAngka = (params) => {
-    tombolPlayerAngka(params);
+    tombolPlayerHuruf(params);
 }
-const tombolPlayerAngka = (params) => {
-    let sourceaudio = "assets/audio/angka/" + params + ".mp3";
+const tombolPlayerHuruf = (params) => {
+    let sourceaudio = "assets/audio/huruf/" + params + ".mp3";
     // let sourceaudio = audio;
-    let audioAngka = new Audio(sourceaudio);
+    let audioHuruf = new Audio(sourceaudio);
     console.log(statusTombolPetunjuk);
     console.log(sourceaudio);
-    console.log(audioAngka);
-    if (statusTombolPetunjukAngka == true) {
-        statusTombolPetunjukAngka = false;
-        audioAngka.play();
-        console.log(statusTombolPetunjukAngka);
+    console.log(audioHuruf);
+    if (statusTombolPetunjukHuruf == true) {
+        statusTombolPetunjukHuruf = false;
+        audioHuruf.play();
+        console.log(statusTombolPetunjukHuruf);
     } else {
-        statusTombolPetunjukAngka = true;
-        audioAngka.pause();
-        audioAngka.currentTime = 0;
-        console.log(statusTombolPetunjukAngka);
+        statusTombolPetunjukHuruf = true;
+        audioHuruf.pause();
+        audioHuruf.currentTime = 0;
+        console.log(statusTombolPetunjukHuruf);
     }
 }
 
 const Homepage = (props) => {
-    console.log(props.angka)
+    console.log(props.huruf)
     return (
         <>
             <div className="flex justify-center w-full h-screen bg-cover bg-no-repeat overscroll-none bg-[url('/assets/play2.jpg')] text-white text-1sm overscroll-auto">
@@ -67,13 +67,13 @@ const Homepage = (props) => {
 
                             <div class="grid grid-cols-4 gap-4">
 
-                                {props.angka ? props.angka.map((data, i) => {
+                                {props.huruf ? props.huruf.map((data, i) => {
                                     return (
                                         <div className="w-10 h-10">
                                             <div key={i}>
-                                                <img src={"/assets/angka/" + data.content_angka + ".png"} alt=""
+                                                <img src={"/assets/huruf/" + data.content_huruf + ".png"} alt=""
                                                     className="hover:scale-125 hover:opacity-150 w-10 h-10"
-                                                    onClick={() => clickAngka(data.content_angka)} />
+                                                    onClick={() => clickAngka(data.content_huruf)} />
                                             </div>
                                         </div>
                                     )

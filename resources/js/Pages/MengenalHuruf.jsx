@@ -29,7 +29,7 @@ const clickAngka = (params) => {
     tombolPlayerAngka(params);
 }
 const tombolPlayerAngka = (params) => {
-    let sourceaudio = "assets/audio/angka/"+ params +".mp3";
+    let sourceaudio = "assets/audio/angka/" + params + ".mp3";
     // let sourceaudio = audio;
     let audioAngka = new Audio(sourceaudio);
     console.log(statusTombolPetunjuk);
@@ -56,11 +56,12 @@ const Homepage = (props) => {
                 <div className="card">
                     <div className="card-body">
 
-                        <div className="columns flex justify-center">
-                            <p className='center flex justify-center decoration-slate-300 outline-orange-600 text-2xl'>
-                                <b>Mengenal Angka</b>
+                        <div className="columns flex justify-center outline-dashed rounded-md border-2 border-sky-500">
+                            <p className='center flex justify-center text-black outline-white-600 text-2xl'>
+                                <b>&nbsp; Mengenal Huruf &nbsp; </b>
                             </p>
                         </div>
+
                         <br />
                         <div className="container ">
 

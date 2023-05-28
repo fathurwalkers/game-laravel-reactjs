@@ -50,6 +50,7 @@ class HomeController extends Controller
                     $random_pick_1_array = $item1["content_huruf"];
                     array_push($array_tebakan, $random_pick_1_array);
                 }
+                array_push($array_tebakan, $huruf);
                 return Inertia::render('TebakHurufAngka', [
                     'nilaitebak' => $huruf,
                     'tebakan' => $array_tebakan
@@ -65,6 +66,7 @@ class HomeController extends Controller
                     $random_pick_1_array = $item1["content_angka"];
                     array_push($array_tebakan, $random_pick_1_array);
                 }
+                array_push($array_tebakan, $angka);
                 return Inertia::render('TebakHurufAngka', [
                     'nilaitebak' => $angka,
                     'tebakan' => $array_tebakan

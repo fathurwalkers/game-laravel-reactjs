@@ -29,7 +29,7 @@ const clickAngka = (params) => {
     tombolPlayerAngka(params);
 }
 const tombolPlayerAngka = (params) => {
-    let sourceaudio = "assets/audio/angka/"+ params +".mp3";
+    let sourceaudio = "assets/audio/" + params + ".mp3";
     // let sourceaudio = audio;
     let audioAngka = new Audio(sourceaudio);
     console.log(statusTombolPetunjuk);
@@ -51,28 +51,40 @@ const Homepage = (props) => {
     console.log(props.nilaitebak)
     return (
         <>
-            <div className="flex justify-center w-full h-screen bg-cover bg-no-repeat overscroll-none bg-[url('/assets/play2.jpg')] text-white text-1sm overscroll-auto">
+            <div className="flex justify-center w-full h-screen bg-cover bg-no-repeat overscroll-none bg-[url('/assets/play3.jpg')] text-white text-1sm overscroll-auto">
 
                 <div className="card">
                     <div className="card-body">
 
-                        <div className="columns flex justify-center">
-                            <p className='center flex justify-center decoration-slate-300 outline-orange-600 text-2xl'>
-                                <b>Mengenal Angka</b>
+                        <div className="columns flex justify-center outline-dashed rounded-md border-2 border-sky-500">
+                            <p className='center flex justify-center text-black outline-white-600 text-2xl'>
+                                <b>&nbsp; Tebak Huruf & Angka &nbsp; </b>
                             </p>
                         </div>
+
                         <br />
+
                         <div className="container ">
 
-                            <div class="grid grid-cols-4 gap-4">
+                            <br />
+                            <div className="columns">
+                                <div className="w-20 blur-sm brightness-50 mx-auto justify-center items-center content-center">
+                                    <img src={"/assets/"+ props.nilaitebak +".png"} alt="" className="opacity-50 hover:scale-125 hover:opacity-200" />
+                                </div>
+                            </div>
+
+                            <br />
+                            <br />
+
+                            <div class="grid grid-cols-3 gap-3">
 
                                 {props.tebakan ? props.tebakan.map((data, i) => {
                                     return (
-                                        <div className="w-10 h-10">
+                                        <div className="flex center justify-center items-center">
                                             <div key={i}>
-                                                <img src={"/assets/" + tebakan + ".png"} alt=""
-                                                    className="hover:scale-125 hover:opacity-150 w-10 h-10"
-                                                    onClick={() => clickAngka(tebakan)} />
+                                                <img src={"/assets/" + data + ".png"} alt=""
+                                                    className="hover:scale-125 hover:opacity-150 w-14 h-14 flex center justify-center items-center"
+                                                    onClick={() => clickAngka(data)} />
                                             </div>
                                         </div>
                                     )

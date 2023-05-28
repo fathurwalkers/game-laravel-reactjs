@@ -48,7 +48,6 @@ class HomeController extends Controller
                 $pick_1_array = Arr::random($random_huruf, 2);
                 foreach ($pick_1_array as $item1) {
                     $random_pick_1_array = $item1["content_huruf"];
-                    dump($random_pick_1_array);
                     array_push($array_tebakan, $random_pick_1_array);
                 }
                 return Inertia::render('TebakHurufAngka', [
@@ -64,7 +63,6 @@ class HomeController extends Controller
                 $pick_1_array = Arr::random($random_angka, 2);
                 foreach ($pick_1_array as $item1) {
                     $random_pick_1_array = $item1["content_angka"];
-                    dump($random_pick_1_array);
                     array_push($array_tebakan, $random_pick_1_array);
                 }
                 return Inertia::render('TebakHurufAngka', [

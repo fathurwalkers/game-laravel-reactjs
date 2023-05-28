@@ -66,13 +66,13 @@ const Homepage = (props) => {
 
                             <div class="grid grid-cols-4 gap-4">
 
-                                {props.angka ? props.angka.map((data, i) => {
+                                {props.tebakan ? props.tebakan.map((data, i) => {
                                     return (
                                         <div className="w-10 h-10">
                                             <div key={i}>
-                                                <img src={"/assets/angka/" + data.content_angka + ".png"} alt=""
+                                                <img src={"/assets/" + tebakan + ".png"} alt=""
                                                     className="hover:scale-125 hover:opacity-150 w-10 h-10"
-                                                    onClick={() => clickAngka(data.content_angka)} />
+                                                    onClick={() => clickAngka(tebakan)} />
                                             </div>
                                         </div>
                                     )

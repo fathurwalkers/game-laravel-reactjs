@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Huruf;
 use App\Models\Angka;
+use App\Models\Benda;
 
 class DatabaseSeeder extends Seeder
 {
@@ -37,6 +38,16 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => now()
             ]);
             $save_angka->save();
+        }
+
+        foreach ($array_benda as $item) {
+            $benda = new Benda;
+            $save_benda = $benda->create([
+                'content_benda' => $item,
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
+            $save_benda->save();
         }
     }
 }

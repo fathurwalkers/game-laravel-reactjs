@@ -2,7 +2,7 @@ import { Head, Link } from '@inertiajs/react';
 
 const tombolKeluar = () => {
     console.log('terklik!');
-    window.open("", "_blank", "");
+    // window.open("", "_blank", "");
     window.close();
 }
 let statusTombolPetunjuk = true;
@@ -44,7 +44,6 @@ const Homepage = () => {
 
                             <br />
                             <br />
-                            <br />
 
                             <div className="columns">
 
@@ -57,17 +56,21 @@ const Homepage = () => {
 
                             </div>
                             <br />
+
                             <div className="columns">
-
                                 <div className="flex w-36 mx-auto justify-center items-center content-center">
-
                                     <img src="/assets/tebak-huruf-angka.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-huruf-angka'} />
                                 </div>
-
                             </div>
 
                             <br />
-                            <br />
+
+                            <div className="columns">
+                                <div className="flex w-36 mx-auto justify-center items-center content-center">
+                                    <img src="/assets/tebak-benda.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-huruf-angka'} />
+                                </div>
+                            </div>
+
 
                             {/* <div className="columns">
                                 <div className="w-36 mx-auto justify-center items-center content-center">

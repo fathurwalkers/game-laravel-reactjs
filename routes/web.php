@@ -11,6 +11,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/mengenal-huruf', [HomeController::class, 'mengenal_huruf'])->name('mengenal-huruf');
     Route::get('/mengenal-angka', [HomeController::class, 'mengenal_angka'])->name('mengenal-angka');
     Route::get('/tebak-huruf-angka', [HomeController::class, 'tebak_huruf_angka'])->name('tebak-huruf-angka');
+    Route::get('/tebak-benda', [HomeController::class, 'tebak_benda'])->name('tebak-benda');
 });
 
 Route::get('/dashboard', function () {

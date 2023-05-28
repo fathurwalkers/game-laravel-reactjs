@@ -48,22 +48,32 @@ const Homepage = () => {
 
                             <div className="columns">
 
-                                <div className="flex w-28 mx-auto justify-center items-center content-center">
-                                    <img src="/assets/menu-huruf.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" />
-                                    <img src="/assets/menu-angka.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" />
+                                <div className="flex w-24 mx-auto justify-center items-center content-center">
+
+                                    <img src="/assets/menu-huruf.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'mengenal-huruf'} />
+
+                                    <img src="/assets/menu-angka.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'mengenal-angka'} />
+                                </div>
+
+                            </div>
+                            <br />
+                            <div className="columns">
+
+                                <div className="flex w-36 mx-auto justify-center items-center content-center">
+
+                                    <img src="/assets/tebak-huruf-angka.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-huruf-angka'} />
                                 </div>
 
                             </div>
 
                             <br />
                             <br />
-                            <br />
 
-                            <div className="columns">
+                            {/* <div className="columns">
                                 <div className="w-36 mx-auto justify-center items-center content-center">
                                     <img src="/assets/tombol-petunjuk.png" alt="" className="hover:scale-125 hover:opacity-200" />
                                 </div>
-                            </div>
+                            </div> */}
                             <br />
                             <div className="columns">
                                 <div className="w-36 mx-auto justify-center items-center content-center">

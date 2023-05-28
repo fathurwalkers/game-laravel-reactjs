@@ -8,6 +8,9 @@ use Inertia\Inertia;
 
 Route::group(['prefix' => '/'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('homepage');
+    Route::get('/mengenal-huruf', [HomeController::class, 'mengenal_huruf'])->name('mengenal-huruf');
+    Route::get('/mengenal-angka', [HomeController::class, 'mengenal_angka'])->name('mengenal-angka');
+    Route::get('/tebak-huruf-angka', [HomeController::class, 'tebak_huruf_angka'])->name('tebak-huruf-angka');
 });
 
 Route::get('/dashboard', function () {

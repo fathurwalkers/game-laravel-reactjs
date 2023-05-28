@@ -67,7 +67,7 @@ const Homepage = () => {
 
                             <div className="columns">
                                 <div className="flex w-36 mx-auto justify-center items-center content-center">
-                                    <img src="/assets/tebak-benda.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-huruf-angka'} />
+                                    <img src="/assets/tebak-benda.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-benda'} />
                                 </div>
                             </div>
 

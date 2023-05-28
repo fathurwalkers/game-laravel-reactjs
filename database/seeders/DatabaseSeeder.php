@@ -20,6 +20,22 @@ class DatabaseSeeder extends Seeder
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
         ];
 
+        $array_benda = [
+            "Lemari",
+            "Ranjang",
+            "Jendela",
+            "Kulkas",
+            "Ponsel",
+            "Buku",
+            "Tas",
+            "Pensil",
+            "Topi",
+            "Sepatu",
+            "Baju",
+            "Celana",
+            "Sepeda",
+        ];
+
         foreach ($array_huruf as $item) {
             $huruf = new Huruf;
             $save_huruf = $huruf->create([

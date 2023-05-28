@@ -77,7 +77,7 @@ const Homepage = (props) => {
                         </div>
                     </div>
                     <div className="modal-action">
-                        <a href={route('tebak-huruf-angka')} className="btn">Yay!</a>
+                        <a href={route('tebak-benda')} className="btn">Yay!</a>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@ const Homepage = (props) => {
 
                         <div className="columns flex justify-center outline-dashed rounded-md border-2 border-sky-500">
                             <p className='center flex justify-center text-black outline-white-600 text-2xl'>
-                                <b>&nbsp; Tebak Huruf & Angka &nbsp; </b>
+                                <b>&nbsp; Tebak Benda &nbsp; </b>
                             </p>
                         </div>
 
@@ -131,6 +131,9 @@ const Homepage = (props) => {
                                                 <img src={"/assets/" + data + ".png"} alt=""
                                                     className="hover:scale-125 hover:opacity-150 w-14 h-14 flex center justify-center items-center"
                                                     onClick={() => cekTebakan(data, props.nilaitebak)} htmlFor="my-modal-3" />
+                                                    <h3 className="font-bold text-lg justify-center items-center content-center text-center"><b>
+                                                        {data}
+                                                        </b> </h3>
                                             </div>
                                         </div>
                                     )
@@ -138,7 +141,6 @@ const Homepage = (props) => {
 
                             </div>
 
-                            <br />
 
                         </div>
 

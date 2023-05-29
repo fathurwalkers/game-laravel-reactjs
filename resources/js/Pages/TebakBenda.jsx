@@ -8,6 +8,7 @@ const tombolKeluar = () => {
 let statusTombolPetunjuk = true;
 let statusTombolPetunjukHuruf = true;
 let statusTombolPetunjukAngka = true;
+let statusTombolPetunjukBenda = true;
 let audio = new Audio("assets/menu-sound1.mp3");
 // let audio = new Audio("assets/audio/huruf/A.mpeg");
 // audio.play();
@@ -25,25 +26,25 @@ const tombolPlayer = () => {
         console.log(statusTombolPetunjuk);
     }
 }
-const clickAngka = (params) => {
-    tombolPlayerAngka(params);
+const clickBenda = (params) => {
+    tombolPlayerBenda(params);
 }
-const tombolPlayerAngka = (params) => {
+const tombolPlayerBenda = (params) => {
     let sourceaudio = "assets/audio/" + params + ".mp3";
     // let sourceaudio = audio;
-    let audioAngka = new Audio(sourceaudio);
+    let audioBenda = new Audio(sourceaudio);
     console.log(statusTombolPetunjuk);
     console.log(sourceaudio);
-    console.log(audioAngka);
-    if (statusTombolPetunjukAngka == true) {
-        statusTombolPetunjukAngka = false;
-        audioAngka.play();
-        console.log(statusTombolPetunjukAngka);
+    console.log(audioBenda);
+    if (statusTombolPetunjukBenda == true) {
+        statusTombolPetunjukBenda = false;
+        audioBenda.play();
+        console.log(statusTombolPetunjukBenda);
     } else {
-        statusTombolPetunjukAngka = true;
-        audioAngka.pause();
-        audioAngka.currentTime = 0;
-        console.log(statusTombolPetunjukAngka);
+        statusTombolPetunjukBenda = true;
+        audioBenda.pause();
+        audioBenda.currentTime = 0;
+        console.log(statusTombolPetunjukBenda);
     }
 }
 
@@ -53,9 +54,15 @@ const cekTebakan = (props1, props2) => {
     if (props1 == props2) {
         console.log(true)
         location.href = "#my-modal-1";
+        let sourceAudioJawaban = "assets/audio/sound-benar.mp3";
+        let audiojawaban = new Audio(sourceAudioJawaban);
+        audiojawaban.play();
     } else {
         console.log(false)
         location.href = "#my-modal-2";
+        let sourceAudioJawaban = "assets/audio/sound-salah.mp3";
+        let audiojawaban = new Audio(sourceAudioJawaban);
+        audiojawaban.play();
     }
     // location.href = "#my-modal-2";
     // setTimeout('', 10000);
@@ -112,14 +119,12 @@ const Homepage = (props) => {
 
                         <div className="container ">
 
-                            <br />
                             <div className="columns">
-                                <div className="w-20 blur-sm brightness-50 mx-auto justify-center items-center content-center">
-                                    <img src={"/assets/" + props.nilaitebak + ".png"} alt="" className="opacity-50 hover:scale-125 hover:opacity-200" />
+                                <div className="w-24 blur-sm brightness-50 mx-auto justify-center items-center content-center">
+                                    <img src={"/assets/" + props.nilaitebak + ".png"} alt="" className="opacity-50 hover:scale-125 hover:opacity-200" onClick={() => clickBenda(props.nilaitebak)}/>
                                 </div>
                             </div>
 
-                            <br />
                             <br />
 
                             <div class="grid grid-cols-3 gap-3">
@@ -129,7 +134,7 @@ const Homepage = (props) => {
                                         <div className="flex center justify-center items-center">
                                             <div key={i}>
                                                 <img src={"/assets/" + data + ".png"} alt=""
-                                                    className="hover:scale-125 hover:opacity-150 w-14 h-14 flex center justify-center items-center"
+                                                    className="hover:scale-125 hover:opacity-150 w-18 h-18 flex center justify-center items-center"
                                                     onClick={() => cekTebakan(data, props.nilaitebak)} htmlFor="my-modal-3" />
                                                     <h3 className="font-bold text-lg justify-center items-center content-center text-center"><b>
                                                         {data}
@@ -140,7 +145,6 @@ const Homepage = (props) => {
                                 }) : "KOSONG"}
 
                             </div>
-
 
                         </div>
 

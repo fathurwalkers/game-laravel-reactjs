@@ -77,7 +77,7 @@ const Homepage = (props) => {
                         </div>
                     </div>
                     <div className="modal-action">
-                        <a href={route('tebak-huruf-angka')} className="btn">Yay!</a>
+                        <a href={route('tebak-huruf')} className="btn">Yay!</a>
                     </div>
                 </div>
             </div>

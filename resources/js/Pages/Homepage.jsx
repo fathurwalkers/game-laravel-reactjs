@@ -47,26 +47,34 @@ const Homepage = () => {
 
                             <div className="columns">
 
-                                <div className="flex w-24 mx-auto justify-center items-center content-center">
+                                <div className="flex w-28 mx-auto justify-center items-center content-center">
 
-                                    <img src="/assets/menu-huruf.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'mengenal-huruf'} />
+                                    <img src="/assets/ABC.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'mengenal-huruf'} />
 
-                                    <img src="/assets/menu-angka.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'mengenal-angka'} />
+                                    <img src="/assets/123.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'mengenal-angka'} />
                                 </div>
 
                             </div>
                             <br />
 
                             <div className="columns">
-                                <div className="flex w-36 mx-auto justify-center items-center content-center">
-                                    <img src="/assets/tebak-huruf-angka.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-huruf-angka'} />
+                                <div className="flex w-28 mx-auto justify-center items-center content-center">
+                                    <img src="/assets/tebak-huruf.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-huruf-angka/huruf'} />
+                                    <img src="/assets/tebak-angka.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-huruf-angka/angka'} />
                                 </div>
                             </div>
 
                             <br />
 
+                            {/* <div className="columns">
+                                <div className="flex w-28 mx-auto justify-center items-center content-center">
+                                    <img src="/assets/tebak-angka.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-huruf-angka/angka'} />
+                                </div>
+                            </div> */}
+
+
                             <div className="columns">
-                                <div className="flex w-36 mx-auto justify-center items-center content-center">
+                                <div className="flex w-28 mx-auto justify-center items-center content-center">
                                     <img src="/assets/tebak-benda.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-benda'} />
                                 </div>
                             </div>

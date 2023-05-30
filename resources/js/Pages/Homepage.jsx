@@ -80,15 +80,15 @@ const Homepage = () => {
                             </div>
 
 
-                            {/* <div className="columns">
+                            <div className="columns">
                                 <div className="w-36 mx-auto justify-center items-center content-center">
-                                    <img src="/assets/tombol-petunjuk.png" alt="" className="hover:scale-125 hover:opacity-200" />
+                                    <img src="/assets/Petunjuk.png" alt="" className="hover:scale-125 hover:opacity-200" />
                                 </div>
-                            </div> */}
+                            </div>
                             <br />
                             <div className="columns">
                                 <div className="w-36 mx-auto justify-center items-center content-center">
-                                    <img src="/assets/tombol-keluar.png" alt="" className="hover:scale-125 hover:opacity-200" onClick={tombolKeluar} />
+                                    <img src="/assets/Keluar.png" alt="" className="hover:scale-125 hover:opacity-200" onClick={tombolKeluar} />
                                 </div>
                             </div>
 

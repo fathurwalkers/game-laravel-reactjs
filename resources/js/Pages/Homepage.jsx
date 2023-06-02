@@ -22,10 +22,77 @@ const tombolPlayer = () => {
     }
 }
 
+const modalPetunjuk = () => {
+    location.href = "#modal-petunjuk";
+}
+
 const Homepage = () => {
     return (
         <>
             <div className="flex justify-center w-full h-screen overscroll-none bg-[url('/assets/test-background2.jpg')] bg-cover text-white text-1sm overscroll-auto bg-contain">
+
+                {/* MODAL PETUNJUK */}
+                <div className="modal" id="modal-petunjuk">
+                    <div className="modal-box bg-primary-content justify-center items-center content-center">
+                        <h3 className="font-bold text-lg justify-center items-center content-center text-center"><b><div className="text-[#50d71e]">PETUNJUK</div></b> </h3>
+                        <br />
+
+                        <div className="columns">
+                            <p className='font-bold text-sm text-dark text-[#000000]'>Tebak Huruf</p>
+                            <p className='font-bold text-sm text-dark text-[#000000]'>
+                                Pada permainan tebak huruf ini, terdapat beberapa petunjuk yang bisa dilakukan untuk mengetahui tiap jawaban dari permainan yang ada. seorang anak dapat berinteraksi dengan bentuk buram dari huruf yang akan ditebak, dengan menekan hurufnya maka akan keluar suara dari huruf yang ditebak, sehingga dapat dengan mudah mengetahui huruf apa yang akan ditebak
+                            </p>
+                        </div>
+                        <br />
+                        <div className="columns">
+                            <p className='font-bold text-sm text-dark text-[#000000]'>Tebak Angka</p>
+                            <p className='font-bold text-sm text-dark text-[#000000]'>
+                                Pada permainan tebak angka ini, terdapat beberapa petunjuk yang bisa dilakukan untuk mengetahui tiap jawaban dari permainan yang ada. seorang anak dapat berinteraksi dengan bentuk buram dari angka yang akan ditebak, dengan menekan angkanya maka akan keluar suara dari angka yang ditebak, sehingga dapat dengan mudah mengetahui angka apa yang akan ditebak
+                            </p>
+                        </div>
+                        <br />
+                        <div className="columns">
+                            <p className='font-bold text-sm text-dark text-[#000000]'>Tebak Benda</p>
+                            <p className='font-bold text-sm text-dark text-[#000000]'>
+                                Pada permainan tebak Benda ini, terdapat beberapa petunjuk yang bisa dilakukan untuk mengetahui tiap jawaban dari permainan yang ada. seorang anak dapat berinteraksi dengan bentuk buram dari Benda yang akan ditebak, dengan menekan Bendanya maka akan keluar suara dari Benda yang ditebak, sehingga dapat dengan mudah mengetahui Benda apa yang akan ditebak
+                            </p>
+                        </div>
+                        {/* <div className="columns">
+                            <div className="w-36 mx-auto justify-center items-center content-center">
+                                <img src="/assets/benar.jpg" alt="" className="hover:scale-125 hover:opacity-200" />
+                            </div>
+                        </div> */}
+
+                        <div className="modal-action">
+                            <a href="" className="btn">Mengerti</a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* MODAL INFORMASI */}
+                <div className="modal" id="modal-informasi">
+                    <div className="modal-box bg-primary-content justify-center items-center content-center">
+                        <h3 className="font-bold text-lg justify-center items-center content-center text-center"><b><div className="text-[#50d71e]">INFORMASI</div></b> </h3>
+                        <br />
+
+                        <div className="columns">
+                            <p className='font-bold text-sm text-dark text-[#000000]'>Informasi Pengembang</p>
+                            <p className='font-bold text-sm text-dark text-[#000000]'>
+                                Aplikasi Game Interaktif <i>Mengenal Angka dan Huruf ini </i>dibuat oleh <b>ANISA SUHARLITA (17 650 046)</b> Mahasiswa Fakultas Teknik Jurusan <b>Teknik Informatika</b> di Universitas Dayanu Ikhsanuddin.
+                            </p>
+                        </div>
+                        <br />
+                        {/* <div className="columns">
+                            <div className="w-36 mx-auto justify-center items-center content-center">
+                                <img src="/assets/benar.jpg" alt="" className="hover:scale-125 hover:opacity-200" />
+                            </div>
+                        </div> */}
+
+                        <div className="modal-action">
+                            <a href="" className="btn">Mengerti</a>
+                        </div>
+                    </div>
+                </div>
 
                 <div className="card">
                     <div className="card-body">
@@ -78,14 +145,20 @@ const Homepage = () => {
                                     <img src="/assets/tebak-benda.png" alt="" className="mx-4 hover:scale-125 hover:opacity-200" onClick={() => location.href = 'tebak-benda'} />
                                 </div>
                             </div>
-
+                            <br />
 
                             <div className="columns">
                                 <div className="w-36 mx-auto justify-center items-center content-center">
-                                    <img src="/assets/Petunjuk.png" alt="" className="hover:scale-125 hover:opacity-200" />
+                                    <img src="/assets/Petunjuk.png" alt="" className="hover:scale-125 hover:opacity-200" onClick={() => location.href = '#modal-petunjuk'}/>
                                 </div>
                             </div>
-                            <br />
+
+                            <div className="columns">
+                                <div className="w-36 mx-auto justify-center items-center content-center">
+                                    <img src="/assets/Informasi.png" alt="" className="hover:scale-125 hover:opacity-200" onClick={() => location.href = '#modal-informasi'} />
+                                </div>
+                            </div>
+
                             <div className="columns">
                                 <div className="w-36 mx-auto justify-center items-center content-center">
                                     <img src="/assets/Keluar.png" alt="" className="hover:scale-125 hover:opacity-200" onClick={tombolKeluar} />

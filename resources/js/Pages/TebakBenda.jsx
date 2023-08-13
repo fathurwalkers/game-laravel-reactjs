@@ -10,8 +10,6 @@ let statusTombolPetunjukHuruf = true;
 let statusTombolPetunjukAngka = true;
 let statusTombolPetunjukBenda = true;
 let audio = new Audio("assets/menu-sound1.mp3");
-// let audio = new Audio("assets/audio/huruf/A.mpeg");
-// audio.play();
 
 const tombolPlayer = () => {
     console.log(statusTombolPetunjuk);
@@ -31,7 +29,6 @@ const clickBenda = (params) => {
 }
 const tombolPlayerBenda = (params) => {
     let sourceaudio = "assets/audio/" + params + ".mp3";
-    // let sourceaudio = audio;
     let audioBenda = new Audio(sourceaudio);
     console.log(statusTombolPetunjuk);
     console.log(sourceaudio);
@@ -64,9 +61,6 @@ const cekTebakan = (props1, props2) => {
         let audiojawaban = new Audio(sourceAudioJawaban);
         audiojawaban.play();
     }
-    // location.href = "#my-modal-2";
-    // setTimeout('', 10000);
-    // location.href = route('tebak-huruf-angka');
 }
 
 const Homepage = (props) => {
@@ -121,7 +115,7 @@ const Homepage = (props) => {
 
                             <div className="columns">
                                 <div className="w-24 blur-sm brightness-50 mx-auto justify-center items-center content-center">
-                                    <img src={"/assets/" + props.nilaitebak + ".png"} alt="" className="opacity-50 hover:scale-125 hover:opacity-200" onClick={() => clickBenda(props.nilaitebak)}/>
+                                    <img src={"/assets/" + props.nilaitebak + ".png"} alt="" className="opacity-50 hover:scale-125 hover:opacity-200" onClick={() => clickBenda(props.nilaitebak)} />
                                 </div>
                             </div>
 
@@ -136,9 +130,9 @@ const Homepage = (props) => {
                                                 <img src={"/assets/" + data + ".png"} alt=""
                                                     className="hover:scale-125 hover:opacity-150 w-18 h-18 flex center justify-center items-center"
                                                     onClick={() => cekTebakan(data, props.nilaitebak)} htmlFor="my-modal-3" />
-                                                    <h3 className="font-bold text-lg justify-center items-center content-center text-center"><b>
-                                                        {data}
-                                                        </b> </h3>
+                                                <h3 className="font-bold text-lg justify-center items-center content-center text-center"><b>
+                                                    {data}
+                                                </b> </h3>
                                             </div>
                                         </div>
                                     )

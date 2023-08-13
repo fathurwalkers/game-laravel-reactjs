@@ -22,7 +22,9 @@ class HomeController extends Controller
 
     public function mengenal_huruf()
     {
-        $huruf = Huruf::all();
+        // $huruf = Huruf::all();
+        $huruf = Huruf::whereBetween('id', [1, 27])->get();
+        dd();
         return Inertia::render('MengenalHuruf', [
             'huruf' => $huruf
         ]);

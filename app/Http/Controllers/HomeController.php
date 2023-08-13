@@ -74,10 +74,7 @@ class HomeController extends Controller
 
     public function tebak_huruf_angka($value)
     {
-        // $array_penentu = ["huruf", "angka", "huruf", "angka", "huruf", "angka"];
-        // $random_penentu = Arr::random($array_penentu);
         $cek_value = $value;
-        // dd($cek_value);
         switch ($cek_value) {
             case "huruf":
                 $array_tebakan = [];

@@ -29,7 +29,7 @@ const clickAngka = (params) => {
     tombolPlayerHuruf(params);
 }
 const tombolPlayerHuruf = (params) => {
-    let sourceaudio = "assets/audio/huruf/" + params + ".mp3";
+    let sourceaudio = "assets/audio/huruf/" + params.toUpperCase() + ".mp3";
     // let sourceaudio = audio;
     let audioHuruf = new Audio(sourceaudio);
     console.log(statusTombolPetunjuk);
@@ -48,10 +48,10 @@ const tombolPlayerHuruf = (params) => {
 }
 
 const Homepage = (props) => {
-    console.log(props.huruf)
+    console.log(props.hurufb)
     return (
         <>
-            <div className="flex justify-center w-full h-screen bg-cover bg-no-repeat overscroll-none bg-[url('/assets/play2.jpg')] text-white text-1sm overscroll-auto">
+            <div className="flex justify-center w-full h-full bg-cover bg-no-repeat overscroll-none bg-[url('/assets/play2.jpg')] text-white text-1sm overscroll-auto">
 
                 <div className="card">
                     <div className="card-body">
@@ -67,11 +67,33 @@ const Homepage = (props) => {
 
                             <div class="grid grid-cols-4 gap-4">
 
-                                {props.huruf ? props.huruf.map((data, i) => {
+                                {props.hurufb ? props.hurufb.map((data, i) => {
                                     return (
                                         <div className="w-10 h-10">
                                             <div key={i}>
                                                 <img src={"/assets/huruf/" + data.content_huruf + ".png"} alt=""
+                                                    className="hover:scale-125 hover:opacity-150 w-10 h-10"
+                                                    onClick={() => clickAngka(data.content_huruf)} />
+                                            </div>
+                                        </div>
+                                    )
+                                }) : "KOSONG"}
+
+                            </div>
+
+                            <br />
+
+                        </div>
+
+                        <div className="container ">
+
+                            <div class="grid grid-cols-4 gap-4">
+
+                                {props.hurufk ? props.hurufk.map((data, i) => {
+                                    return (
+                                        <div className="w-10 h-10">
+                                            <div key={i}>
+                                                <img src={"/assets/huruf/" + data.content_huruf + "1.png"} alt=""
                                                     className="hover:scale-125 hover:opacity-150 w-10 h-10"
                                                     onClick={() => clickAngka(data.content_huruf)} />
                                             </div>

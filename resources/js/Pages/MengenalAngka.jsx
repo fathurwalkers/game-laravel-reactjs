@@ -51,7 +51,7 @@ const Homepage = (props) => {
     console.log(props.angka)
     return (
         <>
-            <div className="flex justify-center w-full h-screen bg-cover bg-no-repeat overscroll-none bg-[url('/assets/play2.jpg')] text-white text-1sm overscroll-auto">
+            <div className="flex justify-center w-full h-full bg-cover bg-no-repeat overscroll-none bg-[url('/assets/play2.jpg')] text-white text-1sm overscroll-auto">
 
                 <div className="card">
                     <div className="card-body">
